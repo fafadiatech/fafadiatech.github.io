@@ -10,7 +10,7 @@ title: Fafadia Tech's Official Blog
 email: customercare@fafadiatech.com
 description: > # this means to ignore newlines until "baseurl:"
   Fafadia Tech is a Mumbai based Startup focusing on open source technologies like Python, PHP and Linux. We also work on Big Data, Machine Learning and Natural Language Process. Our team is currently 18+ people strong. We've been in business since 2009. This blog is collection of our writing, experiments and thoughts. In Python we specially like Django, Flask and Tornado frameworks. For frontend we use Bootstrap and AngularJS. We've developed few Android and iOS Applications. Till date we've successfull completed 60+ projects in Health Care, eCommerce and Finance.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://fafadiatech.github.io" # the base hostname & protocol for your site
 twitter_username: fafadiatechhq
 github_username:  fafadiatech
