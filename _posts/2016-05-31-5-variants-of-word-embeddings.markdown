@@ -22,3 +22,5 @@ Following is a compilation of 5 variants of the original [word2vec](https://en.w
 4. [lda2vec](https://github.com/cemoody/lda2vec), this embedding technique tries to marry best of both worlds, word2vec and LDA. I can see this having a lot of values in domain where there are mixed topics in text.
 
 5. [Wikipedia Navigation Vectors](https://meta.wikimedia.org/wiki/Research:Wikipedia_Navigation_Vectors), Wikipedia is my preferred resource for NLP tasks. This research project take an interesting idea of modelling co-visitation in session and try to figure out similar articles based on raw logs. Be sure to check out the visualization on the page, it's really interesting.
+
+6. [search2vec](https://research.yahoo.com/publications/8758/scalable-semantic-matching-queries-ads-sponsored-search-advertising), Broad matching is big deal in online advertising. Historically this has been done using query expansion and rewriting. This paper talks about embedding search logs's action along with ad information. Key highlight of this paper is that it talks about doing distributed embedding using Hadoop. 
