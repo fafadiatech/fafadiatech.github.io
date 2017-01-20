@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Summary of Readability Counts"
-date:   2017-01-20 11:15:12 +0530
+date:   2017-01-19 11:15:12 +0530
 categories: python django summary
 ---
 
