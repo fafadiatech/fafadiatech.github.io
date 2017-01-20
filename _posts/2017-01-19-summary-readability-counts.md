@@ -5,7 +5,7 @@ date:   2017-01-19 11:15:12 +0530
 categories: python django summary
 ---
 
-Writing code that is readable your peers require some extra effort apart from documentation. I found an interesting Video from Djangocon 2016 on [Readability Counts](https://www.youtube.com/watch?v=NvkC5UBJqeY&t=37s). Its by [Terry Hunner](https://twitter.com/treyhunner), following is summary of talk.
+Writing code that is readable your peers require some extra effort apart from documentation. I found an interesting Video from Djangocon 2016 on [Readability Counts](https://www.youtube.com/watch?v=NvkC5UBJqeY&t=37s). [Terry Hunner](https://twitter.com/treyhunner) talks wonderfully on the matter.
 
 
 Textbook definition from [Wikipedia](https://en.wikipedia.org/wiki/Readability) "Readability is the ease with which a reader can understand a written text."
@@ -36,7 +36,7 @@ Textbook definition from [Wikipedia](https://en.wikipedia.org/wiki/Readability) 
 * Document your code structure and then **stick to them**
 
 ## Naming things
-* If a concept is important it needs names, its used for communication
+* If a concept is important it needs names, it is used for communication
 * Naming things is hard because describing them is hard
 * Summarize that description using name
 * Use long variable names if needed
