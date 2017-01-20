@@ -52,37 +52,38 @@ Textbook definition from [Wikipedia](https://en.wikipedia.org/wiki/Readability) 
 	                and word.upper() != candidate.upper()):
 	            anagrams.append(candidate)
 	{% endhighlight %}
+	
 	can be refactored to 
 
-	``` python
+	{% highlight python %}
 	def detect_anagrams(word, candidates):
 	    anagrams = []
 	    for candidate in candidates:
 	        if is_anagram(word, candidate):
 	            anagrams.append(candidate)
-	```
+	{% endhighlight %}
 	Note: the **is_anagram** function
 * Reading code **aloud** help to find how descriptive your code is
 * When using comments it might suggest you might need more meaningful variable names E.g.
 
-	``` python
+	{% highlight python %}
 	def is_anagram(word1, word2):
 	    word1, word2 = word1.upper(), word2.upper()
 	    are_different_words = (word1 != word2)
 	    have_same_letters = (sorted(word1) == sorted(word2))
 	    return have_same_letters and are_different_words
-	```
+	{% endhighlight %}
 
 ## So Many Functions
 * Break down complex functions into helper functions
 
-	``` python
+	{% highlight python %}
 	def update_appointment_types(self):
 	    """Delete/make appt. types and set default appt. type"""
 	    self._delete_stale_appointment_types()
 	    self._create_new_appointment_types()
 	    self._update_default_appointment_type()
-	```
+	{% endhighlight %}
 * In general, try to write a self-documenting code
 
 ## Programming idioms
