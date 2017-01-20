@@ -104,4 +104,4 @@ Note: the **is_anagram** function
 
 ### Hire Python Developers
 
-We're a team of **experience** Django developers. Our Python team is 15 members strong. In our 7 years of operations we've delivered project to clients in UK, USA and India. We do take on Remote projects that matches your timezone.
+We're a team of **experienced** Django developers. Our Python team is 15 members strong. In our 7 years of operations we've delivered project to clients in UK, USA and India. We do take on Remote projects that matches your timezone.
