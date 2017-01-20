@@ -44,14 +44,14 @@ Textbook definition from [Wikipedia](https://en.wikipedia.org/wiki/Readability) 
 * Replace index access with names e.g. "i, j"
 * Refactor a loaded if statement to its own function. This will make code more readable
 
-	``` python
+	{% highlight python %}
 	def detect_anagrams(word, candidates):
 	    anagrams = []
 	    for candidate in candidates:
 	        if (sorted(word.upper()) == sorted(candidate.upper())
 	                and word.upper() != candidate.upper()):
 	            anagrams.append(candidate)
-	```
+	{% endhighlight %}
 	can be refactored to 
 
 	``` python
