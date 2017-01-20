@@ -55,6 +55,7 @@ categories: python django summary
     ```
 9. Counter part of select_related is prefetch_related which given a child pre-fetches parent objects
 10. Look for queries that are repeated. In some scenarios it will be cheaper to take advantage of the cached query and do the additional filtering in memory:
+
 	```python
 	post = Post.objects.get(slug='this-post')
 	author = Author.objects.get(pk=post.author_id)
