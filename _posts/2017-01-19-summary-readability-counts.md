@@ -52,8 +52,8 @@ Textbook definition from [Wikipedia](https://en.wikipedia.org/wiki/Readability) 
 	                and word.upper() != candidate.upper()):
 	            anagrams.append(candidate)
 	{% endhighlight %}
-	
-	can be refactored to 
+
+can be refactored to 
 
 	{% highlight python %}
 	def detect_anagrams(word, candidates):
@@ -62,7 +62,9 @@ Textbook definition from [Wikipedia](https://en.wikipedia.org/wiki/Readability) 
 	        if is_anagram(word, candidate):
 	            anagrams.append(candidate)
 	{% endhighlight %}
-	Note: the **is_anagram** function
+
+Note: the **is_anagram** function
+
 * Reading code **aloud** help to find how descriptive your code is
 * When using comments it might suggest you might need more meaningful variable names E.g.
 
