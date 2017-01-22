@@ -5,7 +5,7 @@ date:   2017-01-19 11:15:12 +0530
 categories: python django summary
 ---
 
-Writing code that is readable your peers require some extra effort apart from documentation. I found an interesting Video from Djangocon 2016 on [Readability Counts](https://www.youtube.com/watch?v=NvkC5UBJqeY&t=37s). [Terry Hunner](https://twitter.com/treyhunner) talks wonderfully on the matter.
+Writing code that is readable your peers require some extra effort apart from documentation. We found an interesting Video from Djangocon 2016 on [Readability Counts](https://www.youtube.com/watch?v=NvkC5UBJqeY&t=37s). [Terry Hunner](https://twitter.com/treyhunner) talks wonderfully on the matter.
 
 
 Textbook definition from [Wikipedia](https://en.wikipedia.org/wiki/Readability) "Readability is the ease with which a reader can understand a written text."
