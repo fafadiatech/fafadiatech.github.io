@@ -79,7 +79,7 @@ We've come across couple of good Python videos that will help you take you code 
 - Learn advanced techniques with for-else clause and two arguments of iter()
 - Improve your craftsmanship and aim for clean, fast, idiomatic Python code
 - Looping over a range of numbers
-	{% endhighlight %} python
+	{% highlight python %}
 	for i in [0, 1, 2, 3, 4, 5]:
 		print i**2
 
