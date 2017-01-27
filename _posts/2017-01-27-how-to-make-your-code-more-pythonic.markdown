@@ -315,6 +315,7 @@ We've come across couple of good Python videos that will help you take you code 
 
 	# More readable
 	twitter_search('@obama', retweets=False, numtweets=20, popular=True)
+	{% endhighlight %}
 - Clarify multiple return values with named tuples
 	{% highlight python %}
 	doctest.testmod()
@@ -416,3 +417,4 @@ We've come across couple of good Python videos that will help you take you code 
 	# Better wat
 	with ignored(OSError):
 		os.remove('somefile.tmp')
+	{% endhighlight %}
