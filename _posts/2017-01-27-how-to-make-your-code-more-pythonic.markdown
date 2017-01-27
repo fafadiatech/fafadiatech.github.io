@@ -5,11 +5,11 @@ date:   2017-01-27 00:00:00 +0530
 categories: python summary
 ---
 
-We've come across couple of good Python videos that will help you take you code to next level. 
+Just like any other form of art, Programming can always be improved. In daily grind to deliver working software we might forget details and "JUST DO IT". In our quest to improve our python coding we've come across couple of good Python videos that will help you take you code to next level. Following is summary of two talks [Designing Poetic APIs by Erik Rose](https://www.youtube.com/watch?v=JQYnFyG7A8c) and [Transforming Code into Beautiful, Idiomatic Python by Raymond Hettinger](https://www.youtube.com/watch?v=OSGv2VnC0go). On twitter you can find them on [@erikrose](https://twitter.com/erikrose) and [@raymondh](https://twitter.com/raymondh)
 
 # Designing Poetic APIs by Erik Rose
 
-[Pycon 2014 Video](https://www.youtube.com/watch?v=JQYnFyG7A8c) is a good investment of 37 minutes of your time. Following is summary we've compiled from the video:
+[Eric Rose's Github](https://github.com/erikrose) has more fascinating stuff. His talk is a good investment of 37 minutes of your time. Following is summary we've compiled from the video:
 
 ## Don't Be An Architecture Astronaut
 - Best libraries are extracted and not invented
@@ -72,7 +72,7 @@ We've come across couple of good Python videos that will help you take you code 
 
 # Transforming Code into Beautiful, Idiomatic Python by Raymond Hettinger
 
-[48 minutes Youtube Video](https://www.youtube.com/watch?v=OSGv2VnC0go) is another interesting one. Here is the summary
+[RDH Talks](https://www.youtube.com/watch?v=HTLu2DFOdTg&list=PLRVdut2KPAguz3xcd22i_o_onnmDKj3MA) is interesting list. His talk is another interesting one. Here is the summary
 
 ## When you see this, do that instead
 - Replace traditional index manipulation with Python's core looping idioms
