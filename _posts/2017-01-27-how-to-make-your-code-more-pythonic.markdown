@@ -79,7 +79,7 @@ We've come across couple of good Python videos that will help you take you code 
 - Learn advanced techniques with for-else clause and two arguments of iter()
 - Improve your craftsmanship and aim for clean, fast, idiomatic Python code
 - Looping over a range of numbers
-	``` python
+	{% endhighlight %} python
 	for i in [0, 1, 2, 3, 4, 5]:
 		print i**2
 
@@ -91,9 +91,9 @@ We've come across couple of good Python videos that will help you take you code 
 	# Ugly way, in Python 3K this is renamed to xrange
 	for i in xrange(6):
 		print i**2
-	```
+	{% endhighlight %}
 - Looping over a collection
-	```python
+	{% highlight python %}
 	colors = ['red', 'green', 'blue', 'yellow']
 	
 	for i in range(len(colors)):
@@ -102,9 +102,9 @@ We've come across couple of good Python videos that will help you take you code 
 	# Better way
 	for color in colors:
 		print color
-	```
+	{% endhighlight %}
 - Looping backwards
-	```python
+	{% highlight python %}
 	colors = ['red', 'green', 'blue', 'yellow']
 	
 	for i in range(len(colors)-1, -1, -1):
@@ -113,9 +113,9 @@ We've come across couple of good Python videos that will help you take you code 
 	# This is faster and beautiful
 	for color in reversed(colors):
 		print color
-	```
+	{% endhighlight %}
 - Looping over collection and indicies 
-	```python
+	{% highlight python %}
 	colors = ['red', 'green', 'blue', 'yellow']
 	
 	for i in range(len(colors)):
@@ -124,9 +124,9 @@ We've come across couple of good Python videos that will help you take you code 
 	# Better way
 	for i, color in enumerate(color):
 		print i, color
-	```
+	{% endhighlight %}
 - Looping over two collections at once
-	```python
+	{% highlight python %}
 	names = ['raymond', 'rachel', 'matthew']
 	colors = ['red', 'green', 'blue', 'yellow']
 
@@ -143,9 +143,9 @@ We've come across couple of good Python videos that will help you take you code 
 	# Consumes less memory
 	for name, color in izip(names, colors):
 		print name, "->", color
-	```
+	{% endhighlight %}
 - Looping over sorted order
-	```python
+	{% highlight python %}
 	colors = ['red', 'green', 'blue', 'yellow']
 
 	for color in sorted(colors):
@@ -153,9 +153,9 @@ We've come across couple of good Python videos that will help you take you code 
 
 	for color in sorted(colors, reverse=True):
 		print color
-	```
+	{% endhighlight %}
 - Custom sort order
-	```python
+	{% highlight python %}
 	colors = ['red', 'green', 'blue', 'yellow']
 
 	def compare_length(c1, c2):
@@ -167,10 +167,10 @@ We've come across couple of good Python videos that will help you take you code 
 
 	# Better way
 	print sorted(colors, key=len)
-	```
+	{% endhighlight %}
 - Call a function until a sentinal value. Note: [Partial](https://docs.python.org/2/library/functools.html) take a function with one or more arguments and returns a function with fewer argument.
 
-	```python
+	{% highlight python %}
 	blocks = []
 	while True:
 		block = f.read(32)
@@ -185,9 +185,9 @@ We've come across couple of good Python videos that will help you take you code 
 	# 2. Sentinel value
 	for bloc in iter(partial(f.read, 32), ''):
 		blocks.append(block)
-	```
+	{% endhighlight %}
 - Distinguish multiple exit point in loops
-	```python
+	{% highlight python %}
 	def find(seq, target):
 		found = False
 		for i, value in enumerate(seq):
@@ -207,21 +207,21 @@ We've come across couple of good Python videos that will help you take you code 
 		else:
 			return -1
 		return i
-	```
+	{% endhighlight %}
 
 ## Dictionary Skills
 - Mastering dictionaries is fundamental Python skill
 - They are fundamental tool for expressing relationships, linking, counting and grouping
 - Looping over dictionary keys
-	```python
+	{% highlight python %}
 	d = {'matthew': 'blue', 'rachel': 'green', 'raymond': 'red'}
 
 	for k in d:
 		print k
-	```
+	{% endhighlight %}
 - **DONT mutate while iterating over things**
 - Looping over dictionary keys and values
-	```python
+	{% highlight python %}
 
 	for k, v in d.items():
 		print k, "->", v
@@ -229,18 +229,18 @@ We've come across couple of good Python videos that will help you take you code 
 	# Better way
 	for k,v in d.iteritems():
 		print k, "->", v
-	```
+	{% endhighlight %}
 - Construct a dictionary in pairs
-	```python
+	{% highlight python %}
 	names = ['matthew', 'rachel', 'raymond']
 	colors = ['blue', 'green', 'raymond']
 
 	d = dict(izip(names, colors))
 
 	d = dict(enumerate(names))
-	```
+	{% endhighlight %}
 - Counting with dictionaries
-	```python
+	{% highlight python %}
 	colors = ['red', 'green', 'red', 'blue' 'green', 'red']
 
 	d = {}
@@ -260,9 +260,9 @@ We've come across couple of good Python videos that will help you take you code 
 
 	for color in colors:
 		d[color] += 1
-	```
+	{% endhighlight %}
 - Grouping with dictionaries
-	```python
+	{% highlight python %}
 	names = ['raymond', 'rachel', 'matthew', 'roger', 'betty', 'melissa', 'judith', 'charlie']
 	d = {}
 	for name in names:
@@ -282,18 +282,18 @@ We've come across couple of good Python videos that will help you take you code 
 	for name in names:
 		key = len(name)
 		d[name].append(key)
-	```
+	{% endhighlight %}
 - Is a dictionary popitem() atomic?
-	```python
+	{% highlight python %}
 	d = {'matthew': 'blue', 'rachel': 'green', 'raymond': 'red'}
 
 	# Pop item is atomic so it can be used between threads
 	while d:
 		key, value = d.popitem()
 		print key, "->", value
-	```
+	{% endhighlight %}
 - Linking dictionaires (Or chaining them)
-	```python
+	{% highlight python %}
 	# Some dictionary
 	default = {}
 	d = defaults.copy()
@@ -301,7 +301,7 @@ We've come across couple of good Python videos that will help you take you code 
 	d.update(command_line_args)
 
 	d.ChainMap(command_line_args, os.environ, defaults)
-	```
+	{% endhighlight %}
 
 ## Improving Clarity
 - Positional arguments and indicies are nice
@@ -310,13 +310,13 @@ We've come across couple of good Python videos that will help you take you code 
 - The second corresponds to how human's think
 
 - Clarify function calls with keyword arguments (Good activity for someone who doesn't know the codebase)
-	```python
+	{% highlight python %}
 	twitter_search('@obama', False, 20, True)
 
 	# More readable
 	twitter_search('@obama', retweets=False, numtweets=20, popular=True)
 - Clarify multiple return values with named tuples
-	```python
+	{% highlight python %}
 	doctest.testmod()
 	(0, 4)
 
@@ -326,9 +326,9 @@ We've come across couple of good Python videos that will help you take you code 
 	
 	# How named tuples are used
 	TestResults = namedtuple('TestResult', ['failed', 'attempted'])
-	```
+	{% endhighlight %}
 - Unpacking Sequences
-	```python
+	{% highlight python %}
 		p = 'a', 'b', 'c', d
 		fname = p[0]
 		lname = p[1]
@@ -336,9 +336,9 @@ We've come across couple of good Python videos that will help you take you code 
 		email = p[3]
 
 		fname, lname, age, email = p
-	```
+	{% endhighlight %}
 - Update multiple state variables
-	```python
+	{% highlight python %}
 	def fibonacci(n):
 		x = 0
 		y = 1
@@ -354,7 +354,7 @@ We've come across couple of good Python videos that will help you take you code 
 		for i in range(n):
 			print x
 			x, y = y, x+y
-	```
+	{% endhighlight %}
 
 ## Tuple packing and unpacking
 - Don't under-estimate the advantages of updating state variables at the same time
@@ -367,7 +367,7 @@ We've come across couple of good Python videos that will help you take you code 
 - Good naming is essential
 - Remember the Spiderman rule: With great power comes great responsibility
 - Using decorators to factor-out administrative logic
-	```python
+	{% highlight python %}
 	def web_lookup(url, saved={}):
 		if url in saved:
 			return saved[url]
@@ -392,9 +392,9 @@ We've come across couple of good Python videos that will help you take you code 
 			saved[*args] = result
 			return result
 		return newfunc
-	```
+	{% endhighlight %}
 - How to open and close files
-	```python
+	{% highlight python %}
 	f = open('data.txt')
 	try:
 		data = f.read()
@@ -405,9 +405,9 @@ We've come across couple of good Python videos that will help you take you code 
 	# Better way, closes file automatically
 	with open('data.txt') as f:
 		data = f.read()
-	```
+	{% endhighlight %}
 - Factor-out temporary context
-	```python
+	{% highlight python %}
 	try:
 		os.remove('somefile.tmp')
 	except OSError:
