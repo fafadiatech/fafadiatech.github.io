@@ -418,3 +418,16 @@ Just like any other form of art, Programming can always be improved. In daily gr
 	with ignored(OSError):
 		os.remove('somefile.tmp')
 	{% endhighlight %}
+
+### Python Outsourcing
+
+Have a startup idea you'd see come to life? Have a legacy codebase that needs upgradation? Have a deadline and want to get job done on budget? Look no further, Hire Fafadia Tech. 
+
+Why select Fafadia Tech?
+
+* Rich experience working as **remote team for 12+ Clients**
+* Clear **communication** & Excellent **work ethic**
+* Capability to convert **vauge requirements to working product**
+* Ability to solve **complex problems**
+
+Checkout our **[Upwork Credentials](https://www.upwork.com/o/profiles/users/_~0101eef5d1307a46f5/)**
