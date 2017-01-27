@@ -7,6 +7,8 @@ categories: python summary
 
 Just like any other form of art, Programming can always be improved. In daily grind to deliver working software we might forget details and "JUST DO IT". In our quest to improve our python coding we've come across couple of good Python videos that will help you take you code to next level. Following is summary of two talks [Designing Poetic APIs by Erik Rose](https://www.youtube.com/watch?v=JQYnFyG7A8c) and [Transforming Code into Beautiful, Idiomatic Python by Raymond Hettinger](https://www.youtube.com/watch?v=OSGv2VnC0go). On twitter you can find them on [@erikrose](https://twitter.com/erikrose) and [@raymondh](https://twitter.com/raymondh)
 
+<img src="/assets/images/blog-covers/python-programming-tips-artwork-summary.png" />
+
 # Designing Poetic APIs by Erik Rose
 
 [Eric Rose's Github](https://github.com/erikrose) has more fascinating stuff. His talk is a good investment of 37 minutes of your time. Following is summary we've compiled from the video:
@@ -421,7 +423,7 @@ Just like any other form of art, Programming can always be improved. In daily gr
 
 ### Python Outsourcing
 
-Have a startup idea you'd see come to life? Have a legacy codebase that needs upgradation? Have a deadline and want to get job done on budget? Look no further, <a href="mailto:customercare@fafadiatech.com">Hire Fafadia Tech</a>
+Have a startup idea you'd like to see come to life? Have a legacy codebase that needs upgradation? Have a deadline and want to get job done on budget? Look no further, <a href="mailto:customercare@fafadiatech.com">Hire Fafadia Tech</a>
 
 Why select Fafadia Tech?
 
