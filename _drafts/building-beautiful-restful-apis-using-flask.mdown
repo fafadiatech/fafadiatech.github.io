@@ -1,0 +1,67 @@
+# Building beautiful RESTful APIs using Flask
+
+- What is Web API?
+	- Anatomy of a Request:
+		- Method: {GET, POST, PUT, DELETE}
+		- Path: /api/books
+		- Query: ?search=Moby Dick
+		- Headers: Authorization, Cookies, Caching etc.
+		- Body
+	- Anatomy of a Response:
+		- Status Code
+		- Headers
+		- Body 
+	- REST Conventions:
+		- Collection: /books
+		- Item: /books/123
+		- Controller: /books/123/borrow
+		- Mappings to Method:
+			- Listing Boook -> GET
+			- Display Book -> GET
+			- Update Book -> PUT
+			- Borrow book -> POST
+			- Delete Book -> DELETE
+	- [flask-restplus](https://github.com/noirbizarre/flask-restplus) is a nice extensions of Flask
+		- Features:
+			- define and document endpoints
+			- validate inputs
+			- format output (as JSON) {SQLAlchemy objects will be transfered to JSON based on sepcification provided}
+			- turn Python exceptions into HTTP responses
+			- minimise boilerplace code
+			- Killer Feature: Generates documentation for us
+	- Example:
+		```python
+		from flask_restplus import Resource
+
+		@api.route('<int:id>/borrow')
+		class BorrowBookController(Resource):
+		"""
+
+		Allows the current user to borrow  the book from
+		our library
+		"""
+		def get(self, id):
+			pass
+
+		def post(self, id):
+		return {'message': 'OK'}
+
+
+		```
+	- Query Arguments
+		```python
+		from flask_restplus import reqparse
+		pagination = reqparse.RequestParser()
+
+		# To attach 
+
+		@api.expect(parses.pagination)
+		def get(self):
+		...
+		```
+	- API Model: allows to instanciate and register model to your API/Namespace. Use `@api.expect` to attach it to APIs request. They are more flexibily because
+		- Inheritance
+		- Nesting
+	- API Response Code: `@api.response` decorator 
+	- API Response Body: `@api.marshal_with`
+	- API Error Handler: `@api.errorhandler`
