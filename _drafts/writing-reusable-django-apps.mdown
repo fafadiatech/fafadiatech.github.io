@@ -1,0 +1,46 @@
+# Writing Reusable Django Apps
+
+Talk by [hzy](https://github.com/hzy)
+
+## What are reusable apps?
+
+- Good reusable app is one that **solves one problem**
+- Why would you want to create reusable app?
+	- Reuse code between your own projects
+	- Share works with others
+	- Reduce size of your project
+	- Independently testable
+- Examples of good reusable apps
+	- [django-taggit](https://github.com/alex/django-taggit)
+	- [django-imagekit](https://github.com/matthewwithanm/django-imagekit)
+	- [python-social-auth](https://github.com/omab/python-social-auth)
+- Apps we've written at Gizmag
+	- django-generic-follow: Allow users to follow anything {Allow collaborators to get notifications when working on an application}
+	- remote-fixtures: Allow users to share fixtures
+- Writing a ratings app
+	- Has simple requirement: Users should be able to rate any instance of any project up or down
+	- Steps for creating reusable application
+		1. Create LICENSE, README.md and .gitignore
+		1. Create an app `polarize` with `__init__.py` and `models.py`
+		1. Symlink app into main project {Note: This can be replaced with git's [submodules feature](https://git-scm.com/book/en/v2/Git-Tools-Submodules)}
+		1. Add `polarize` in INSTALLED_APPS
+	- Models and Migrations:
+		- Use of [GenericForiegnKey](https://docs.djangoproject.com/en/1.10/ref/contrib/contenttypes/#django.contrib.contenttypes.fields.GenericForeignKey) is useful in places where you're not sure how your app will work in conjunction with other people's project
+	- Testing:
+		- Create `tests` folder with
+			1. tests.py which contains actual tests
+		- Using continous integration like [Travis-CI](https://travis-ci.org/) for managing projects
+	- Distribution:
+		- `setup.py` in root of our repository
+		- `./setup.py register` will create entry on PyPI
+		- `./setup.py sdist upload` will upload source distribution on PyPI
+		- `pip install django-polarize` will install package for us
+	- Documentation:
+		- Important Sections:
+			- Compatibility
+				- Required
+				- Optional
+			- Installation
+			- Usage Instructions
+	- Writing reusable apps have non-trivial overhead
+	- Benifit often wins out
