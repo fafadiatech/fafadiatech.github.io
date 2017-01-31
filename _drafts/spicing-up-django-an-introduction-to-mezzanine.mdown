@@ -1,0 +1,71 @@
+# Spicing up Django: An Introduction to Mezzanine
+
+- Mezzanine CMS
+	- Created by Stephen McDonald
+	- Healthy community
+- Philosophy
+	- A content-oriented site platform
+	- Battires included
+	- Useful mixins, helpers etc
+	- Power to developer
+- Mezzanine is just Django
+- Quickstart
+	- `pip install mezzanine`
+	- `mezzanine-project my-project`
+	- `python manage.py createdb`
+	- `python manage.py runserver`
+- Write your own application
+	- Models: Polls + Choices
+	- Editable via admin site
+	- Has a "list" and "detail" view
+	- Handles from input (voting)
+	- Install apps
+		- Add your app to INSTALLED_APPS
+		- Wire up your urlconf
+		- Run migrations
+	- Mezzanine uses graphelli as admin interface
+- Some new requirements
+	- We want a publishing workflow
+	- Most recent polls first
+	- Slug fields instead of PKs in URLs
+	- We want Choice to be sortable
+	- `Displayable` model is base for all public-facing content pieces in Mezzanine
+		- Adds Drafts/Published status
+		- Allows for scheduled publishing
+		- Can auto-generate slugs
+		- Comes with sidekick admin class and manager
+		- Fields included by default:
+			- title
+			- meta_title
+			- slug (auto/customizable)
+			- description
+			- publish_date
+			- status
+			- more...
+		- You can define custom fields just in-herit from it
+	- `DisplayableAdmin` is also useful
+	- `published` manager. 
+	```python
+	def get_queryset(self):
+		return (Poll.objects.published().order_by("-published_date")[:5])
+	```
+- `Orderable` model
+	- Ideal for sortable inlines
+	- Comes in both Stacked and Tabular varities
+	- Supports drag-and-drop sorting
+	- Supports dynamic creation of more inline forms
+- Templates
+	- Extend mezzanine blocks
+	- If you extend from `base.html` integrates with Bootstrap
+- Also include
+	- Custom page types
+	- File management
+	- Automated deployments
+	- Page processors
+	- eCommerce
+	- WYSIWYG editor (swappable)
+	- User-editable settings
+- Further reading
+	- Mezzanine's Content Architecture
+	- Community blog
+	- Mezzanine's blog app
