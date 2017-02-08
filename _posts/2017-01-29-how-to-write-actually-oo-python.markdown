@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to Write Actually Object Oriented Python"
-date:   2017-01-29 00:00:00 +0530
+date:   2017-02-01 00:00:00 +0530
 categories: python summary
 ---
 
