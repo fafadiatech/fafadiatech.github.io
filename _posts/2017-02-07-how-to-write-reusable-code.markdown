@@ -68,11 +68,13 @@ categories: python summary
 - Rule of thumb: Every function should either return a value or have a side effect. Never both!
 - Anti Pattern 1
     - C programmer are notorious for this sort of thing
+    
     {% highlight c %}
     int strmunge(string s){
 
     }
     {% endhighlight %}
+
     - Python programmers also do it
     - Compute and Modify original datastructure is bad
 
