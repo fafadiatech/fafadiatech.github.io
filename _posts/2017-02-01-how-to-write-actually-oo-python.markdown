@@ -5,8 +5,6 @@ date:   2017-02-01 00:00:00 +0530
 categories: python summary
 ---
 
-# How to Write Actually Object Oriented Python
-
 Summary of [PyGotham 2014 Talk](https://www.youtube.com/watch?v=VUvEDg30FyY&index=62&list=WL)
 
 - Procedural programming simple steps and recipie of things and steps to follow that are easy to wrap head round. 
