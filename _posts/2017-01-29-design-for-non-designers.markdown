@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Design for Non-Designers"
+title:  "Summary: Design for Non-Designers"
 date:   2017-01-29 00:00:00 +0530
 categories: design summary
 ---

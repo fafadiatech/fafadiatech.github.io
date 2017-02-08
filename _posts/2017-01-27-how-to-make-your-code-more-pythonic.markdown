@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to make your code more Pythonic?"
+title:  "Summary: How to make your code more Pythonic?"
 date:   2017-01-27 00:00:00 +0530
 categories: python summary
 ---
