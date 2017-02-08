@@ -5,8 +5,6 @@ date:   2017-01-29 00:00:00 +0530
 categories: design summary
 ---
 
-# Design for Non-Designer 
-
 [Django Con 2016 Video](https://www.youtube.com/watch?v=-JQBfUnYxXA) nicely explains and gives tips for non-designers. Its a good talk to get you upto some level of competency in designing
 
 - Design: Make an interface that works well
