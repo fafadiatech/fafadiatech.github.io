@@ -55,7 +55,7 @@ Summary of [PyGotham 2014 Talk](https://www.youtube.com/watch?v=VUvEDg30FyY&inde
 ## Bonus: Tell Don't Ask
 	- Tell object to do their stuff, dont ask them for their data
 	- Refactor code from
-	```python
+	{% highlight python %}
 	def calculate(self):
 		cost = 0
 		for line_item in self.bill.items:
@@ -64,4 +64,4 @@ Summary of [PyGotham 2014 Talk](https://www.youtube.com/watch?v=VUvEDg30FyY&inde
 	# Better way
 	def calculate(self):
 		cost = self.bill.total_cost()
-	```
+	{% endhighlight %}
