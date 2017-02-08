@@ -6,8 +6,7 @@ categories: python checklist codereview protips
 ---
 
 
-Checklist are great tool, [NASA's Space Shuttle Operational
-Flight Rules](https://www.jsc.nasa.gov/news/columbia/fr_generic.pdf) is a great example. This checklist is heavily inspired from [this Checklist](https://www.liberty.edu/media/1414/%5B6401%5Dcode_review_checklist.pdf). Python specific elements are added to it which are inspired from [Pycon 2016 Talk](https://www.youtube.com/watch?v=D_6ybDcU5gc). Go ahead and use this checklist for:
+Code Review are a great tool and you should do it often. [Best Practices for Code Review](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/). Checklist are great tool, [NASA's Space Shuttle Operational Flight Rules](https://www.jsc.nasa.gov/news/columbia/fr_generic.pdf) is a great example. Current checklist is heavily inspired from [this Checklist](https://www.liberty.edu/media/1414/%5B6401%5Dcode_review_checklist.pdf). Python specific elements are added to it which are inspired from [Pycon 2016 Talk](https://www.youtube.com/watch?v=D_6ybDcU5gc). Go ahead and use this checklist for:
     - Guide while starting new project
     - Refactoring an existing project
     - Rewriting a legacy project
