@@ -1,0 +1,78 @@
+# Angular 2 Crash Course
+
+## What is Angular 2?
+
+- Angular 2 is JS client side framework
+
+## What it offers?
+
+- Dynamic HTML
+- Powerful templates
+- Fast Rendering
+- HTTP services
+- Component encapsulation
+- Form & input handling 
+- Event handling 
+- Routing 
+- Latest JS standards 
+
+## Whats new from Angular 1?
+
+- No more controllers and scope {Replaced Scopes with Components}
+- Components/reusable code
+- Reduce Learning Curve
+- TypeScript & ES2015/ES6
+- Better Mobile Support
+- RxJS & Observable
+
+## What is TypeScript?
+
+- A strict superset of Javascript with added features
+- Maintain by MS
+- Optional static typing
+- Class-based OO programming
+- Re-assembles languages like Java and C++
+
+## Components
+
+- Main way to build and specify elements and logic on the page
+- Basic building blocks of the UI
+- An Angular application is a tree of Angular components
+- Decorators allow us to mark classes as angular components
+- `@` is a decorator
+- `selector` is what we will use as HTML tag
+- `template` is content of components
+- `()` anything in Angular with paranthesis are events
+
+## Services
+
+- Services are used reusable data services to share between components throughout applications
+- Refactoring data access to a separate service keeps the component lean and focused on supporting views
+- Services are invariably asynchronous. We can return data as promise or an observable using RxJS
+
+## Hands On Sessions
+
+- [Quick Start](https://github.com/angular/quickstart) is what we will be using
+- `npm install` after cloning for installing dependencies
+- `npm start` to get everything going. There could be a possible error which can be solve using information from this [StackOverflow Post](http://stackoverflow.com/questions/34335340/angular2-quickstart-npm-start-is-not-working-correctly)
+- You want to look at `.ts` files which gets compiled to `.js` file
+- `main.ts` this is where we bring app modules and bootstrap that app module. Angular 2 has bootstrap modules, which bootstraps entire application
+- `app.module.ts` this is where we import NgModule which bind all modules
+- `app.component.ts` this is where we've written first component
+- `index.html` this is where you will find `<my-app>` tag which get built using code in `app.component.ts`
+- Use `app.component.ts` as meeting place for all sub components
+- Once you've created `user.component.ts` within `components` you will need to register to `app.module.ts`. It also needs to be added to declarations
+- Anytime application renders it calls `constructor()`
+- Good practise to define values of your vars in `constructor`
+- Typing is useful for all attributes of class
+- `interface` is used to define custom types [Ref](https://angular-2-training-book.rangle.io/handout/features/interfaces.html)
+- `*ngFor` is used to iterate through a collection
+- `*ngIf` replaces `ng-show` from Angular 1
+- `{{ showHobbies ? "Hide Hobbies": "Show Hobbies"}}` is how you write conditional expressions
+- `<input type="text" name="first_name" [(ngModel)]="first_name" />` is how you create models in Angular 2. This needs form module which needs to be added to `app.module.ts`. Also needs to be included in `imports` section
+- For interacting with API we will need to build services layer. `services` need to be created withing `app` folder. E.g `posts.service.ts`
+- [jsonplaceholder](https://jsonplaceholder.typicode.com/) is a great tool to moch things up. Another good one is [Mockaroo](https://www.mockaroo.com/)
+- `import {Injectible} from '@angular/core';`,  `import {Http} from '@angular/http';` and `import 'rxjs/operator/map';`
+- `import {PostService} from '../services/posts.service';`
+- `providers: [PostService]` should be registered in our component `user.component.ts`
+- `this.http.get('').map(res => res.json());` in `posts.services.ts`
