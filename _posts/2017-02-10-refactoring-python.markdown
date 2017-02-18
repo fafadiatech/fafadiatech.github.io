@@ -1,4 +1,11 @@
-# Refactoring Python: Why and how to restructure your code
+---
+layout: post
+title:  "Summary: Refactoring Python: Why and how to restructure your code"
+date:   2017-02-10 00:00:00 +0530
+categories: python summary
+---
+
+[Refactoring](https://en.wikipedia.org/wiki/Code_refactoring) is often not budgeted. But as [Brett Slatkin](https://twitter.com/haxor) mentions in his [PyCon 2016 talk](https://www.youtube.com/watch?v=D_6ybDcU5gc) it is one of the most important thing experienced developers get into habbit of doing. Following is summary of the talk 
 
 - What is refactoring?
 	- Repeatedly reorganizing and rewriting code until its obvious* to new reader.
