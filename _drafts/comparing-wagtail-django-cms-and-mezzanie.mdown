@@ -1,0 +1,22 @@
+# Comparing Wagtail, Django CMS and Mezzanie
+
+- Model:
+	- Mezzanine:
+		- Page: One instance for every page for your website 
+		- Pages can have tree hierarchy all of which inherit from Page model
+	- Wagtail:
+		- Also uses Page model
+		- Maintains version of page
+		- Publish flag allows to hide pages that are still drafts
+		- Biggest difference: It doesn't have Page types. It has different fields that come instead with it
+		- Wagtail expects you to put everything together as opposed to working out of the box. Sort of like Lego sets
+		- Killer feature string field, which is powerful
+			- Meta lego block 
+	- Django-cms:
+		- No page type models, instead it has placeholders
+		- DB structure is different uses Plugin
+		- Maintains two copies of pages. Draft and Live version
+- Admin Interface:
+	- Wagtail: has a nicer Admin Panel
+	- Mezzanine: has a standard Django Admin Panel
+	- Django-CMS: all frontend all the time. 

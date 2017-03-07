@@ -1,0 +1,20 @@
+# Internationalise Django Apps
+
+- `i18n` short form for Internationalize
+- Two levels
+	- OS level
+	- Application i18n
+- Localisation implies cultrual adaptation and translation
+	- Identify fonts, i18n methods etc.
+	- Enable i18n methods
+	- Translate, localise and test
+	- Package, ship and maintain
+- What is locale?
+	- Is a language representation
+	- Country code is attached
+		- bn_BF vs bn_IN
+	- Encoding is also kept
+	- Holds i10n related data
+- Pot file is a template contains translations
+- MO file is binary format of Pot file
+- 

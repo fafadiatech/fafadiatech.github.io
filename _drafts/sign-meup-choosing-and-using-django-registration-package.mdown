@@ -1,0 +1,155 @@
+# Functional Programming with Python
+
+[Talk](https://www.youtube.com/watch?v=Ta1bAMOMFOI&t=606s)
+
+- Used in
+    - Trading
+    - Algorithmic
+    - Telecommunication (Concurrency)
+- Features of functional programming
+    - Everything is a functions
+    - Pure function without side effects
+    - Immutable Data Structures
+    - Preserve state in functions
+    - Recursion instead of loops
+- Advantages of Functional Programming
+    - Absence of side effects can make your program robust
+    - Program tend to be more modular and typically smaller building blocks
+    - Better testable - call with same parameters always returns same results
+    - Focus in algorithm
+    - Conceptual fit with prallel / concurrent programming 
+    - Live updates - Install a new release while running {Erlang}
+- Disadvantages of Functional Programming
+    - Solution to the same problem can look very different
+    - Finding good developers can be hard
+    - Not equally useful for all kinds of problems
+    - Recursion is on oders and magnitudes more complex than looping
+    - Immutable datastructures may increase run times
+- Python's Functional Features - Overview
+    - Pure functions (Sort of)
+    - Closure - holds state in a function
+    - Functions as objects and decorators
+    - Immutable data types
+    - Lazy Evaluation - generators
+    - List (dictionary, set) comprehension
+    - functools, itertools, lambda, map, filter
+    - Recursion - try to avoid recusion limit has a reason
+- Pure Functions - No Side Effects
+    - No side effects returns value only
+    - "shallow copy" problem
+    ```python
+    def do_pure(data):
+        """ Return copy time two.
+        """
+        return data * 2
+    ```
+    - No gurantee of purness
+    - Pure functions by convention
+- Side Effects
+    - Side effects are common
+    ```python
+    def do_side_effects(my_list):
+        """modify list appending 100
+        """
+        my_list.append(100)
+    ```
+- Functions are objects
+    ```
+    def func1():
+        return 1
+
+    def func2():
+        return 2
+
+    my_func = {"a": func1, "b": func2}
+    my_func[a]()
+    ```
+    - Everything is an object
+- Closures and Currying
+    ```python
+    def outer(outer_args):
+        def inner(inner_args):
+            return inner_args + outer_args
+        return inner
+
+    func = outer(10)
+    func(5) # Returns 15
+    ```
+    - Also called function factory
+    - Storing states in functions is really common
+- Partial Functions
+    ```python
+    import functools 
+    def func(a, b, c):
+        return a, b, c
+
+    p_func = functools.partial(func, 10)
+    p_func(3, 4) # Return 10, 3, 4
+
+    p_func = functools.partial(func, 10, 12)
+    p_func(3) # Return 10, 12, 3
+    ```
+    - In language like Haskell function take one arugment which is partial to next one
+- Recursion
+    - Recusion limit in Python is 1000, but its almost 10 times more costly than loop version
+- Lambda:
+    - Anonymous functions 
+    - Express only, no statements
+    - Useful for callbacks
+    - Can be replaced with functions
+- List comprehension {Comes from Haskell} instead of map
+    ```python
+    map(lambda arg: arg * 2, range(2, 6))
+
+    [x * 2 for x in range(2, 6)]
+    ```
+- Filters are similar but you can use conditions at end of list comprehensions
+- Decorators
+    - Applications of closures
+    ```python
+    import functools
+    def decorator(func):
+        @functools.wrap(func):
+        def new_func(*args, **kwargs):
+            print "decorator was here"
+            return func(*args, **kwargs)
+        return new_func
+
+    @decorator
+    def add(a, b):
+        return a + b
+
+    add(2, 3) # Outputs decorator was here before actual output 5
+- Immutable Data Types
+    - Lists == elements of same kind
+    - Tuple == "named" elements
+    - Freeze Sets
+- Not only functional programming
+    - Pure functional program can be difficult to implement
+    - Combine with procedural and object-oriented program parts
+    - Choosing the right tool for task at hand 
+    - Develop a feeling where a functional approach can be beneficial
+- Avoid side-effects
+    - Set all attributes in __init__
+    - Actual useful application of static methods
+    - Fewer side effects than setting attributes outside __init__
+    - Your beloved classes and instances are still there
+    - Inheritance without overriding __init__ and using super, child class implements own_make_attr1()
+- Freeze Classes
+    - Convert List to Tuple
+    - No furthure modifications possible on tuples
+    - Useful for read-only scenarios
+    - Stepwise freezing and unfreezing
+        - Override special methods like __setitem__
+    - Usecase for freezing
+        - Legacy code: Where all data modified?
+        - Complex System: Detect unwanted modifications?
+- Lazy Evaluation
+    - Iterators and Generators 
+    - Save Memory and CPUs
+- `itertools` offers tools for working with iterators
+- Pipelining - Chaining Commands
+    - Generators make good pipelines
+    - Useful for workflow problems 
+    - Example parsing log file
+- 

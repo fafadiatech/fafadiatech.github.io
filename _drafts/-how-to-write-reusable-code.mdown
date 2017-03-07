@@ -1,0 +1,125 @@
+# Summary: How to write Reusable Code
+
+[PyCon 2015](https://www.youtube.com/watch?v=r9cnHO15YgU)
+
+## Sumary
+
+- OOP was not a silver bullet
+- How to write reusable code?
+	- Through hard work its not free or its magic. 
+	- Required foretought and attention to detail
+- Caveat:
+	- Not everything needs to be library
+- Principles of Reusable Code:
+	- Be a better programmer
+	- Fewer classes, more functions
+	- Funtions != procedures (beware of side effects)
+	- Fewer frameworks, more libraries
+	- Don't go overboard
+	- Don't solve everything
+	- Test, test, test
+	- Document, document, document
+	- Extensibility != reusability
+
+## Be a better programmer
+
+- Read more code
+- Write more code
+- Read more books
+- Do not learn to program from Google
+- Book reccommendations:
+	- The Practice of Programming
+	- The Pragmatic Programmer
+	- Beautiful Code
+- Review and Refactor your code mercilessly
+
+## Fewer classes, more functions
+
+- Don't write classes when you need function
+- A collection of related functions with shared state: that's a class make one!
+- Anti Pattern 1
+	- a class with a single public method
+	- especially a class with single method
+	```python
+	class ThingLoader:
+		def __init__(self, host, id):
+			self.host = host
+			self.id = id
+
+		def load(self):
+			#
+			#...
+	```
+- Anti Pattern 2
+	- Opposite of Anti Pattern 1
+	- If set of functions use same arguments and use similar data structure need to be in a Class
+
+## Functions != Procedures
+
+- Pascal's best idea: functions compute stuff, procedures do stuff
+- mainstream imperative languages (C, Java, Python) don't care
+- You should care about distinction
+- Rule of thumb: Every function should either return a value or have a side effect. Never both!
+- Anti Pattern 1
+	- C programmer are notorious for this sort of thing
+	``` c
+	int strmunge(string s){
+
+	}
+	```
+	- Python programmers also do it
+	- Compute and Modify original datastructure is bad
+
+
+## Fewer frameworks, more libraries
+
+- Library: Code that you call (you are in control)
+- Framework: Code that calls you (frameworks are in control)
+- You can't pick and choose which bits of framework you want
+- It's typically all or nothing
+- This hampers reuse
+
+## Don't go overboard
+
+- OOP is a useful trick have in the toolbox
+- Thus, calsses are not evil
+- A computer is just a big box of numbers (with some wires going and some wires going out)
+- Side effects are unavoidable: they are not evil
+- Certain problem domains call out for constraints
+- Frameworks are not evil
+
+## Don't solve everything
+
+- Avoid the temptation to handle every case: you will miss something
+- Who can supply the functionality you left out? programmers, the very people who use your library
+- Who can remove that bit of ill-advised code you put in that's ruining my dat? NOBODY
+
+## Test, test, test
+
+- Automated test are necessary but not sufficient
+- Untested code is useless
+- Tested code might be useful
+- No controversy here: You must write tests
+
+## Document, document, document
+
+- Documentation is necessary but not sufficient
+- Undocumented code is useless
+- Documented code might be useful
+- Inline reference docs (docstring, java, etc) is bare minimum
+- When you document every public method, you will find gaps
+- This will also help write tests
+
+## Extensibility != Reusability
+
+- Another part of the early 90s snake-oil promise: extensible, reusable software components
+- Just because you type "class Foo" does not make your code reusable or extensible
+- These are largely independent properties of software
+
+## Conclusion
+
+- There is no such thing as free lunch
+- Good stuff require efforts
+- That includes reusable and/or extensible code
+- Beware of pompus windbags, clueless pontificators and other purveyours of snake oil
+
