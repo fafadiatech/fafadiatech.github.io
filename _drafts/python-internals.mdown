@@ -1,0 +1,27 @@
+# Python Internals
+
+## CPython internals - Interpreter and source code overview - Lecture 1
+
+[Video Link](https://www.youtube.com/watch?v=LhadeL7_EIU&list=PLwyG5wA5gIzgTFj5KgJJ15lxq5Cv6lo_0)
+
+- `peephole.c` will tell you what piece of code runs
+- Python execution workflow:
+	- `.py` -> `python` -> `output`
+- Standard Python interpreter is called CPython {python.exe}
+- PyPy
+- Jython
+- Skulpt
+- CPython are files written in C. {Contains .c and .h}
+- {CPython .c, .h} -> GCC -> Python
+- First C compiler has been written in .ASM basic which Compilers have been improving
+- `.py` -> Compiler -> ByteCode -> Interpreter -> Output
+- Python's Compiler is not interesting {Its similar to Statically Compiled Language}
+- Main Directories:
+	- Include: Definition of all the interfaces
+	- Objects: Are all C files for different objects {Boolean, List etc}
+	- Python: This is where the runtime
+	- Modules: This is where all standard libraries included
+- opcode.h: Talks about different kinds of Opcodes in Python
+- ceval.c: Main interpreter loop for Python
+- `for(;;)` is where all the code gets executed
+- 
