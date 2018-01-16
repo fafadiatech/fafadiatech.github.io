@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to Be More Effective with Functions"
-date:   2017-01-15 00:00:00 +0530
+date:   2018-01-15 00:00:00 +0530
 categories: python summary
 ---
 
