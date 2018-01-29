@@ -1,0 +1,82 @@
+---
+layout: post
+title:  "Summary: A Powerful Weapon in your Python Arsenal"
+date:   2018-01-28 00:00:00 +0530
+categories: python summary
+---
+
+Decorators and Generators are one of the most appealing features of Pythons. Colton Myers gave a talk at [PyCon 2014](https://www.youtube.com/watch?v=9oyr0mocZTg) on decorators. Following is summary of that talk
+
+# What is a Decorator?
+
+This is what a decorator looks like
+
+```python
+@my_decorator
+def my_awesome_function():
+    pass
+```
+
+## Decorators wrap functions
+
+1. Add functionality 
+1. Modify behavior
+1. Perform setup/teardown
+1. Diagnostics {timing, etc}
+
+## What is a function
+
+- Everything in Python is an object, hence even **functions are objects**
+- Functions can also create another functions
+
+```python
+
+# this is called closure
+def make_printer(word):
+    def inner():
+        print(word)
+    return inner
+
+p = make_printer('such wow')
+p()
+```
+
+- Decorators are also closures, they can also be created by classes
+
+```python
+
+# this is no-op decorator
+def my_decorator(wrapped):
+    def inner(*args, **kwargs):
+        return wrapped(*args, **kwargs)
+    return inner
+
+
+# decorator is called syntactic sugar
+@my_decorator
+def myfun():
+    pass
+```
+
+- Slightly complicated example
+
+```python
+def shout(wrapped):
+    def inner(*args, **kwargs):
+        print("BEFORE")
+        ret = wrapped(*args, **kwargs)
+        print("AFTER")
+        return ret
+    return inner
+
+@shout
+def myfunc():
+    print("such wow!")
+
+# Output that you will see after calling myfunc is
+# >>> myfunc()
+# BEFORE
+# such wow!
+# AFTER
+# >>>
+```
