@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Summary: A Powerful Weapon in your Python Arsenal"
+title:  "Summary: Decorators - A Powerful Weapon in your Python Arsenal"
 date:   2018-01-28 00:00:00 +0530
 categories: python summary
 ---
@@ -92,6 +92,7 @@ def myfunc():
 ## wrapt library
 
 - [wrapt](http://wrapt.readthedocs.io/en/latest/) is a nice library that can be used to create decorators
+
 ```python
 import wrapt
 
