@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Summary: Django - I didn't know Queryset could do that"
-date:   2018-01-28 00:00:00 +0530
+date:   2018-01-29 00:00:00 +0530
 categories: django summary
 ---
 
@@ -140,6 +140,3 @@ Order.objects.raw("""
 	SELECT * FROM ...
 """)
 ```
-```
-
-
